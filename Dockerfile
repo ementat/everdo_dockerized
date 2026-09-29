@@ -2,14 +2,9 @@
 FROM jlesage/baseimage-gui:debian-13-v4
 
 # Install Everdo dependencies
-RUN apt-get update && apt-get install -y \
-    wget \
-    libasound2t64 \
-    libglib2.0-0 \
-    libnss3 \
-    libgtk-3-0 \
-    libgbm1 \
-    && rm -rf /var/lib/apt/lists/*
+RUN \
+    add-pkg wget ca-certificates libasound2t64 libglib2.0-0 libnss3 libgtk-3-0 libgbm1 && \
+    rm -rf /var/lib/apt/lists/*
 
 # Download and extract Everdo AppImage
 RUN wget --no-verbose --timeout=30 --tries=3 \
