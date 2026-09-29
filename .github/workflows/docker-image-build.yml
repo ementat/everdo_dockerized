@@ -16,4 +16,4 @@ jobs:
     - uses: actions/checkout@v6
     - uses: docker/setup-buildx-action@v4
     - name: Build the Docker image
-      run: docker buildx build -t everdo-docker . --tag my-image-name:latest
+      run: docker buildx build --tag everdo-docker:latest .
