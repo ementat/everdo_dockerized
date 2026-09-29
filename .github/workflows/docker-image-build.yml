@@ -32,6 +32,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/web-robot-control-app:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/everdo-docker:latest
           
           
